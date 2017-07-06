@@ -4,7 +4,10 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <title>Chocolate</title>
     <style>
-      
+      @keyframes candy-colors {
+        from: #C68200;
+        to: #D9412E;
+      }
       body {
         font-family: "Raleway", sans-serif;
         color: #292929;
@@ -19,6 +22,9 @@
         width: 40px;
         background-color: #C68200;
         border-radius: 50%;
+        animation-name: candy-colors;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
       }
       #candy: after {
         clear: both;
