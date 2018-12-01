@@ -18,7 +18,7 @@
   </nav>
   <div id="body">
 
-    <body>12/1/2018-5
+    <body>12/1/2018-6
       <button id="NewGFame">New Game</button>
       <button id="StopGFame">Stop Game</button>
       <canvas id="peanutbutter" width="500" height="400">
@@ -106,9 +106,9 @@ var score;
 var Paddle2Y;
 var audio;
 // 12/1/2018 create a boolean to check whether there is localStorage
-const isStorage = 0;
+// const isStorage = 0;
 // 12/1/2018 create an array to hold the high scores - the values are for TESTING
-var highScores = [10, 11, 12];
+// var highScores = [10, 11, 12];
 
 NewGFame();
   
@@ -125,7 +125,7 @@ function gameWin() {
   ctx.fillText('You have won',
   	canvas.width / 2, canvas.height / 2);
   // 12/1/2018 - save high scores in localStorage.
-  isStorage && localStorage.setItem('kevinHighScores', highScores);
+  // isStorage && localStorage.setItem('kevinHighScores', highScores);
   
 
 }
@@ -198,9 +198,11 @@ function NewGFame() {
   // 12/1/2018 - check whether localStorage is available
   isStorage = 'undefined' !== typeof localStorage; 
   // get any score that's there and save into scores[]
+  /*
   if (isStorage && localStorage.getItem('kevinHighScores')) {
     highScores = localStorage.getItem('kevinHighScores').split(',');
     }
+  */
   // console.log("high score: " ) + highScores[0];
 }
 
