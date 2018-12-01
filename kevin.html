@@ -105,6 +105,11 @@ var Paddle1Y;
 var score;
 var Paddle2Y;
 var audio;
+// 12/1/2018 create a boolean to check whether there is localStorage
+const isStorage;
+// 12/1/2018 create an array to hold the high scores - the values are for TESTING
+var highScores[10, 11, 12];
+
 NewGFame();
   
 function gameWin() {
@@ -119,8 +124,9 @@ function gameWin() {
   ctx.textAlign = 'center';
   ctx.fillText('You have won',
   	canvas.width / 2, canvas.height / 2);
-  // 12/1/2018 - save score in localStorage
-  isStorage && localStorage.setItem('kevin-scores', elements.scores);
+  // 12/1/2018 - save high scores in localStorage.
+  isStorage && localStorage.setItem('kevinHighScores', highScores);
+  
 
 }
 function stopGame() {
@@ -190,7 +196,12 @@ function NewGFame() {
   audio.src = "GameBeat.mp3";
   audio.play();
   // 12/1/2018 - check whether localStorage is available
-  const isStorage = 'undefined' !== typeof localStorage; 
+  isStorage = 'undefined' !== typeof localStorage; 
+  // get any score that's there and save into scores[]
+  if (isStorage && localStorage.getItem('kevinHighScores')) {
+    highScores = localStorage.getItem('kevinHighScores').split(',');
+    }
+  // console.log("high score: " ) + highScores[0];
 }
 
 function drawScfore() {
