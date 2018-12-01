@@ -18,7 +18,7 @@
   </nav>
   <div id="body">
 
-    <body>
+    <body>12/1/2018A
       <button id="NewGFame">New Game</button>
       <button id="StopGFame">Stop Game</button>
       <canvas id="peanutbutter" width="500" height="400">
@@ -119,6 +119,9 @@ function gameWin() {
   ctx.textAlign = 'center';
   ctx.fillText('You have won',
   	canvas.width / 2, canvas.height / 2);
+  // 12/1/2018 - save score in localStorage
+  isStorage && localStorage.setItem('kevin-scores', elements.scores);
+
 }
 function stopGame() {
   ctx.clearRect(0, 0, 500, 400);
@@ -186,6 +189,8 @@ function NewGFame() {
   audio = new Audio();
   audio.src = "GameBeat.mp3";
   audio.play();
+  // 12/1/2018 - check whether localStorage is available
+  const isStorage = 'undefined' !== typeof localStorage; 
 }
 
 function drawScfore() {
