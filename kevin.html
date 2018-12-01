@@ -18,7 +18,7 @@
   </nav>
   <div id="body">
 
-    <body>12/1/2018-10
+    <body>12/1/2018-11
       <button id="NewGFame">New Game</button>
       <button id="StopGFame">Stop Game</button>
       <canvas id="peanutbutter" width="500" height="400">
@@ -125,7 +125,7 @@ function gameWin() {
   ctx.fillText('You have won',
   	canvas.width / 2, canvas.height / 2);
   // 12/1/2018 - save high scores in localStorage.
-  // isStorage && localStorage.setItem('kevinHighScores', highScores);
+  isStorage && localStorage.setItem('kevinHighScores', highScores);
   
 
 }
