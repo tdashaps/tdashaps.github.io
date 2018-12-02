@@ -18,7 +18,7 @@
   </nav>
   <div id="body">
 
-    <body>12/1/2018-17: working to store high scores, but localStorage writes back 1, 2, 3, 4,5, 6, 7 to console.log
+    <body>12/1/2018-17: working to store high scores, but localStorage writes back 1, 2, 3, 4, 5, 6, 7 to console.log
       <button id="NewGFame">New Game</button>
       <button id="StopGFame">Stop Game</button>
       <canvas id="peanutbutter" width="500" height="400">
@@ -105,7 +105,7 @@ var Paddle1Y;
 var score;
 var Paddle2Y;
 var audio;
-// 12/1/2018 - check whether localStorage is available
+// 12/1/2018 - true if there is local storage else false if 'undefined'
 isStorage = 'undefined' !== typeof localStorage; 
 // 12/1/2018 create an array to hold the high scores - the values are for TESTING
 var highScores = [10, 11, 12];
