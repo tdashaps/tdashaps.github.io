@@ -47,5 +47,33 @@
       <p>So far, so good. Well, not so good. I'm going with the idea that you can fix the caching problem by committing twice. (Not entirely working.) You need to make a small change (like, for example, adding a space) the 2nd time (or the Commit button doesn't light up).</p>
       <img width="120px" src="http://www.lovethispic.com/uploaded_images/37971-Chocolate-Candies.jpg">
     </div>
+    <div id='output'></div>
   </body>
 </html>
+
+<script>
+var highScores = [10, 8];
+var score = 29;
+var isStorage;
+// 1. Is there local storage?
+if (typeof localStorage == 'undefined') {
+	isStorage = false;
+  }
+else {
+	isStorge = true;
+};
+// 2. If so, read in the previous high scores.
+if (isStorage) {
+	if (localStorage.getItem('crypticHighScores')) {
+  	// highScores = localStorage.getItem('crypticHighScores').split(',');
+    document.getElementById('output').innerHTML = localStorage.getItem('crypticHighScores').split(',');
+  }
+}
+highScores.push(score);
+// .sort() is lexical; you have to write the numeric sort
+highScores.sort(function(a,b) { return b - a; });
+// highScores.sort();
+document.getElementById('output').innerHTML = highScores;
+// 3. Save the current high scores to local storage.
+localStorage.setItem('crypticHighScores', highScores);
+</script>
