@@ -8,7 +8,9 @@
     background: #D3D3D3;
     width: 800px;
     margin: 0 auto;
-  }
+    display: flex; 
+    flex-direction: row;
+}  }
   h1 {
     font-size: 24px;
     font-family: Verdana;
@@ -17,13 +19,21 @@
     font-size: 20px;
     font-family: Verdana;
   }
+  .column {
+    width: 360px;
+  }
   </style>
 </head>
 <body>
   <h1>Twine Starter Projects</h1>
+  <div class="column">
   <h2>Instructions</h2>
   <p>To download a starter project, right-click its link. Then click <strong>Save Linked File</strong>. The file will be saved in your <strong>Downloads</strong> folder.<br /><img src="downloadLinkedFile.png" width="50%"></p>
+  </div>
+
+  <div class="column">
   <h2>Starter Projects</h2>
   <p><a href="Escape.html">Escape Starter Project</a></p>
+  </div>
 </body>
 </html>
