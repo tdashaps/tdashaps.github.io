@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hack This Page</title>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <meta charset="utf-8"/>
+  </head>
+
+  <body>
+
+    <p>1. Change THIS to something else. Then change the underlining to bold.</p>
+    <p>2. Change me from italic to underlined.</p>
+    <h1> 3. I am a big heading. Make me smaller by changing one number in two places.</h1>
+    <p style="color: red;">4. Change me to another color.</p>
+    <p>Change this sun to another image.</p>
+    <img src='https://m.media-amazon.com/images/I/61nltawl3ML._AC_SL1500_.jpg'>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+  </body>
+
+</html>
